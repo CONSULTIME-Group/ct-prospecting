@@ -877,8 +877,11 @@ Profil type : ${lead.profil_type} | Risque concurrent : ${lead.risque_concurrent
             : <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>{filtPL.map((lead, i) => <Card key={lead._id || i} lead={lead} ckey={`p-${lead._id || i}`} isPL={true} />)}</div>}
         </div>
       )}
-
-      <Toast toasts={toasts} />
+<Toast toasts={toasts} />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  return { props: {} };
 }
